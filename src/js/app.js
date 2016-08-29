@@ -1,5 +1,5 @@
 //require('bootstrap-loader');
-import styles from './main.css';
+// import styles from './main.css';
 var angular = require('angular');
 var uiRouter = require('angular-ui-router');
 

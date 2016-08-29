@@ -8,9 +8,6 @@
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>-->
     <!-- <link rel="stylesheet" type="text/css" href="css/index.css"></head> -->
     <!-- <link rel="stylesheet" type="text/css" href="css/ui.css"> -->
-    <script src="../dist/previsaoDoTempo.js"></script>
-    <link rel="stylesheet" href="../dist/styles.css"/>
-
 </head>
     <body  ng-controller="previsaoController as previsaoCtrl" >
         <div class="jumbotron">
@@ -87,7 +84,21 @@
                </ui-accordions>
           </div>
         </div>
+        <!-- <div ng-messages="contatoForm.nome.$error" class="alert alert-danger">
+        			<div ng-message="required">
+        				Por favor, preencha o campo nome!
+        			</div>
+        			<div ng-message="minlength">
+        				O campo nome deve ter no mínimo 10 caracteres.
+        			</div>
+        		</div>
 
+        		<div ng-show="contatoForm.telefone.$error.required && contatoForm.telefone.$dirty" class="alert alert-danger">
+        			Por favor, preencha o campo telefone!
+        		</div>
+        		<div ng-show="contatoForm.telefone.$error.pattern" class="alert alert-danger">
+        			O campo telefone deve ter o formato DDDDD-DDDD.
+        		</div> -->
 
             <div ng-include="'view/rodape.html'"></div>
     </body>

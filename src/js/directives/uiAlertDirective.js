@@ -1,6 +1,8 @@
+var templateCache = require('../../view/alert.html');
 module.exports = function() { //como é case sentive ele gera ui-alert
     return {
-        templateUrl: "../view/alert.html",
+        //  templateUrl: "../view/alert.html",
+        template: templateCache,
         //    replace: true; remove os elementos externo levando em consideração só os elementos do template
         restrict: "AE", // A = Atributo , E = Elemento, C = classe do elemento, M = Comentário  .Restringe o modo de utilização da diretica
         scope: { // Por padrão compartilha o scopo de onde foi aplicada, Aqui restringe, isola o escopo da diretiva. E faz a mediação dos dois escopos

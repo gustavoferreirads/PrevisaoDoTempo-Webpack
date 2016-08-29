@@ -1,2 +1,38 @@
+@import url("./ui.css");
 
-    /*@import url("./css/ui.css");*/
+.jumbotron {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.desgracado{
+  width: 100%;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.form-control {
+    margin-bottom: 5px;
+}
+
+.selecionado{
+    background: yellow;
+}
+
+.negrito{
+    font-weight: bold;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+     text-align: center;
+}
