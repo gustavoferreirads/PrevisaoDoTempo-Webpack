@@ -17,7 +17,7 @@ module.exports = function(config) {
             'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-resource.js',
             'https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.0/ui-bootstrap-tpls.min.js',
             'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-mocks.js',
-            'dist/*.js'
+            'src/test/**/*.js'
         ],
 
         reporters: ['progress', 'coverage'],
@@ -28,8 +28,8 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'dist/all.min.js': ['coverage'],
-            'tests/**/*.js': ['webpack']
+            '/src/js/**/*.js': ['coverage'],
+            '/src/tests/**/*.js': ['webpack']
         },
 
         coverageReporter: {
@@ -51,14 +51,14 @@ module.exports = function(config) {
                             path.resolve('node_modules/')
                         ],
                         include: [
-                            path.resolve(__dirname, "/js/"), // My tests are under src folder :(
+                            path.resolve(__dirname, "/src/tests/"), // My tests are under src folder :(
                         ],
                         loader: 'babel'
                     },
                     // transpile and instrument only testing sources with babel-istanbul
                     {
                         test: /\.js$/,
-                        include: path.resolve(__dirname, "/tests/"),
+                        include: path.resolve(__dirname, "/src/tests/"),
                         loader: 'babel-istanbul',
                         query: {
                             cacheDirectory: true

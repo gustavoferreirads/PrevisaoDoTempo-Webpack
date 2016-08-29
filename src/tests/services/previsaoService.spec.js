@@ -1,17 +1,17 @@
-describe('PrevisaoAPI', function() {
+describe('PrevisaoService', function() {
     var api;
     var cidade = 'Floripa';
     var url = "http://api.openweathermap.org/data/2.5/weather?APPID=b06246ab3117789f1d4b2e93a3683bec&lang=pt&units=metric&q=" + cidade;
     const expectedResult = {temperatura: 24};
     var $httpBackend;
-       
+
         beforeEach(function() { module('previsaoDoTempo');});
-        
+
         beforeEach(function() {
-            inject(function(previsaoAPI, _$httpBackend_, config) {
-                api = previsaoAPI;
+            inject(function(previsaoService, _$httpBackend_, config) {
+                api = previsaoService;
                  $httpBackend = _$httpBackend_;
-             
+
             });
         });
 

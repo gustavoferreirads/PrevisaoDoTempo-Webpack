@@ -19,4 +19,3 @@ describe('Teste filter Cidade  Estado', function() {
         });
 
 });
-

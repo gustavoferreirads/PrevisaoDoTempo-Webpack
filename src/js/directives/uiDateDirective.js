@@ -3,7 +3,7 @@ module.exports = function($filter) { //como é case sentive ele gera ui-alert
     return {
         require: "ngModel", // Diz a qual api a diretiva quer ter acesso e recebe isso no 4 parametro no link "ctrl" Estudar api ngModel e Element
         link: function(scope, element, attrs, ctrl) { // Mesmo escopo do controller caso não isole o escopo da diretiva, dentreo,
-                'ngInject';
+        //        'ngInject';
                 //console.log(attrs);
                 console.log(ctrl); //ELement tem muitas operações ler refernecia
 
