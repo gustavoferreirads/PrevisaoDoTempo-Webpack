@@ -1,19 +1,17 @@
-//require('bootstrap-loader');
-// import styles from './main.css';
-var angular = require('angular');
-var uiRouter = require('angular-ui-router');
+const angular = require('angular');
+const uiRouter = require('angular-ui-router');
+const controller = require('./controllers/previsaoController.js');
+const previsaoAPI = require('./services/previsaoAPI.js');
+const uiAlert = require('./directives/uiAlertDirective.js');
+const uiAccordions = require('./directives/uiAccordionsDirective.js');
+const uiAccordion = require('./directives/uiAccordionDirective.js');
+const uiDate = require('./directives/uiDateDirective.js');
+const cidadeEstadoFilter = require('./filter/cidadeEstadoFilter.js');
+const nameFilter = require('./filter/nameFilter.js');
+const config = require('./config/configValue.js');
+const configRouter = require('./config/configRouter.js');
 
-var controller = require('./controllers/previsaoController.js');
-var previsaoAPI = require('./services/previsaoAPI.js');
-var uiAlert = require('./directives/uiAlertDirective.js');
-var uiAccordions = require('./directives/uiAccordionsDirective.js');
-var uiAccordion = require('./directives/uiAccordionDirective.js');
-var uiDate = require('./directives/uiDateDirective.js');
-var cidadeEstadoFilter = require('./filter/cidadeEstadoFilter.js');
-var nameFilter = require('./filter/nameFilter.js');
-var config = require('./config/configValue.js');
-
-angular.module("previsaoDoTempo", [])
+angular.module("previsaoDoTempo", ["ngRoute", uiRouter])
     .controller('previsaoController', controller)
     .service('previsaoAPI', previsaoAPI)
     .directive('uiAlert', uiAlert)
@@ -22,4 +20,5 @@ angular.module("previsaoDoTempo", [])
     .directive('uiAccordions', uiAccordions)
     .filter('cidadeEstado', cidadeEstadoFilter)
     .filter('descricao', nameFilter)
+    //.config(configRouter)
     .value('config', config);

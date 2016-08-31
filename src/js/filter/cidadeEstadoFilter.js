@@ -1,7 +1,3 @@
-module.exports = function() {
-    return function(input, estado) {
-        if (input && estado)
-            return input + " - " + estado;
-        return input;
-    };
+module.exports = () => {
+    return (input, estado) => input && estado ? input + " - " + estado : input;
 };

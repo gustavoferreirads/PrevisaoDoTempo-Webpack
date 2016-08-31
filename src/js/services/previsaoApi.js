@@ -1,6 +1,6 @@
-module.exports = function($http, config) {
+export default function($http, config) {
     'ngInject';
-    var _carregaPrevisoes = function(cidade) {
+    const _carregaPrevisoes = (cidade) => {
         return $http.get(config.baseUrl + cidade);
     };
 

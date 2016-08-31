@@ -3,7 +3,6 @@ var settings = require('./settings.js'); // minhas configuração
 var webpack = require('webpack'); //Importando outros módulos para ajudar na minha Stack
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 //Exportando módulo de configuração para o webpack
 module.exports = (function configuracaoDeWebpack() {
@@ -92,14 +91,14 @@ module.exports = (function configuracaoDeWebpack() {
             }), new ExtractTextPlugin('styles.css'));
 
     } else {
-        configuracao.module.preLoaders.push({
-            test: /\.js$/,
-            exclude: [
-                /node_modules/,
-                /\tests\.js$/
-            ],
-            loader: 'istanbul-instrumenter'
-        });
+        // configuracao.module.preLoaders.push({
+        //     test: /\.js$/,
+        //     exclude: [
+        //         /node_modules/,
+        //         /\tests\.js$/
+        //     ],
+        //     loader: 'istanbul-instrumenter'
+        // });
 
         configuracao.module.loaders.push({
             test: /\.scss$/,

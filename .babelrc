@@ -2,11 +2,16 @@
   "presets": ["es2015"],
   "env": {
     "test": {
-      "plugins": [ "istanbul" , {
-          "exclude": [
-            "tests/**/*.js"
-          ]
-        }]
+      "plugins": [
+        [
+          "istanbul",
+          {
+            "exclude": [
+              "**/*.spec.js"
+            ]
+          }
+        ]
+      ]
     }
   }
 }

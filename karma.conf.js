@@ -1,7 +1,8 @@
 process.env.NODE_ENV = 'test';
 
 var webpackConfig = require('./webpack.config.js');
-webpackConfig.entry = {};
+webpackConfig.entry = {}
+webpackConfig.plugins = [];
 
 module.exports = function(config) {
         config.set({
@@ -20,8 +21,8 @@ module.exports = function(config) {
 
             // list of files / patterns to load in the browser
             files: [
-                //                './src/tests/**/*.js',
-                './specs.webpack.js'
+                './specs.webpack.js',
+                './dist/previsaoDoTempo.bundle.f7a930a3fe2737269934.js'
             ],
 
             // list of files to exclude
@@ -36,8 +37,7 @@ module.exports = function(config) {
             // preprocess matching files before serving them to the browser
             // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
             preprocessors: {
-                //            '/src/js/**/*.js': ['coverage'],
-                '*.js': ['webpack', 'babel', 'source-map']
+                './specs.webpack.js': ['babel', 'webpack', 'sourcemap']
             },
 
             coverageReporter: {
