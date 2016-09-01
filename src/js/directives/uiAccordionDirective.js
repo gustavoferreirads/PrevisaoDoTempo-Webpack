@@ -1,7 +1,7 @@
 var templateCache = require('../../view/accordion.html');
 
 module.exports = function() {
-
+  console.log(templateCache)
     return {
         template: templateCache,
         //templateUrl: "view/accordion.html",

@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<div class="jumbotron" ng-controller="previsaoController as previsaoCtrl" >
     <div>
          <h4>{{previsaoCtrl.titulo}}</h4>
         <hr/>
@@ -14,7 +14,7 @@
     </div>
 
     <div>
-        <ui-alert title="{{previsaoCtrl.titleError}}" message="previsaoCtrl.error" ng-show="previsaoCtrl.showError" >ç
+        <ui-alert title="{{previsaoCtrl.titleError}}" message="previsaoCtrl.error" ng-show="previsaoCtrl.showError" >
             Teste de da propriedade trasclude que mantem o conteudo dentro do elemento
         </ui-alert>
 

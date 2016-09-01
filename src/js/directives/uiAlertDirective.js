@@ -1,5 +1,6 @@
 var templateCache = require('../../view/alert.html');
 module.exports = function() { //como é case sentive ele gera ui-alert
+  console.log(templateCache);
     return {
         //  templateUrl: "../view/alert.html",
         template: templateCache,

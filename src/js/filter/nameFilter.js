@@ -1,4 +1,4 @@
-module.exports = function() {
+export default function() {
     return function(input) {
         if (input) {
             let listaDeNomes = input.split(" ");

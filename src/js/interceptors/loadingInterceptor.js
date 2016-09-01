@@ -1,4 +1,5 @@
 export default ($q, $rootScope, $timeout) => {
+   'ngInject';
     return {
         request: function(config) {
             $rootScope.loading = true;

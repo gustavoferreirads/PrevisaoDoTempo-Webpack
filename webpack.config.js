@@ -49,7 +49,7 @@ module.exports = (function configuracaoDeWebpack() {
         jshint: {
             esversion: 6
         },
-        devtool: 'source-map',
+        devtool: 'inline-source-map',
         plugins: [
             new HtmlWebpackPlugin({
                 template: './src/index.html'
